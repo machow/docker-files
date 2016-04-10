@@ -1,4 +1,6 @@
-FROM rocker/r-base
+FROM rocker/rstudio
+
+RUN install2.r --error RCurl
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
