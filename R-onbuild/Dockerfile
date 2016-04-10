@@ -4,4 +4,4 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 ONBUILD COPY . /usr/src/app
-ONBUILD RUN Rscript -e 1 --args --bootstrap-packrat
+ONBUILD RUN Rscript --no-save -e 1 --args --bootstrap-packrat
